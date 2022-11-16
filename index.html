@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="css/style.css">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--<title>Responsive Navigation Menu Bar</title>-->
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <span class="logo navLogo"><a href="#"><img src="img/Frame 20.svg" alt=""></a></span>
+            <i class='bx bx-menu sidebarOpen' ></i>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#"><img src="img/Frame 21.svg" alt=""></a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Обо мне</a></li>
+                    <li><a href="#">Портфолио</a></li>
+                    <li><a href="#">Запись на прием</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<script>
+
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+
+</script>
+
+</body>
+</html>
